@@ -8,7 +8,7 @@ const Home = () => {
           className="border rounded-full backdrop-grayscale-0 border-gray-600 w-48 h-48 m-auto md:w-60 md:h-60 hover:border-gray-900 "
         />
         <h1 className="text-sm font-bold py-3 md:text-base">Hello, I am Sarmad!</h1>
-        <p className="font-bold text-3xl py-8 md:text-5xl">A frontend developer <br></br>specialized in React</p>
+        <p className="font-bold text-3xl py-8 md:text-5xl">A frontend developer <br></br>specialized in React and React-Native</p>
         <a href="https://drive.google.com/file/d/1AHPQ2KuzTzpu3ATQ1f27BO6NToN5RW6g/view?usp=drive_link" target="blank">
           <button  type="button" className=" hover:bg-[#da4167] text-center bg-[#04151f] border-0 py-2 px-8 focus:outline-none rounded text-lg disabled:cursor-not-allowed">
           Download CV</button>
