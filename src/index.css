@@ -2,23 +2,63 @@
 @tailwind components;
 
 .app{
-  @apply bg-[#44355b] text-[#f0eff4]
+  @apply bg-[#0E1117] text-[#F1F6FC]
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transition: top 0.3s;
+  transition: transform 0.3s ease;
+}
+
+.navbar--hidden {
+  transform: translateY(-100%); /* Moves the navbar up */
+}
+/* ServiceCard.css */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* Space between cards */
+}
+
+.card {
+  background-color: #2a2a2e; /* Card background */
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px; /* Fixed width for cards */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+
+
+
+@keyframes arrow-move {
+  0% {
+      transform: translateX(0);
   }
-  @media (max-width: 600px){
-    .navbar {
-      position: relative;
-    }
+  50% {
+      transform: translateX(5px); /* Adjust the distance as needed */
   }
-  
-  .navbar--hidden {
-    top: -100px;
+  100% {
+      transform: translateX(0);
   }
+}
+
+.animate-arrow {
+  animation: arrow-move 0.5s ease-in-out infinite; /* Adjust the duration and easing as needed */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
 @tailwind utilities;
