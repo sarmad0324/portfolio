@@ -5,12 +5,62 @@
   @apply bg-[#0E1117] text-[#F1F6FC]
 }
 
-.navbar {
-  transition: transform 0.3s ease;
+.navbar--hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.3s, opacity 0.3s linear;
+}
+/* Mobile navigation */
+/* Mobile Navigation */
+/* Ensure the header has a higher z-index than the nav */
+header {
+  position: relative;
+  z-index: 1000; /* Higher than mobile nav */
 }
 
-.navbar--hidden {
-  transform: translateY(-100%); /* Moves the navbar up */
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 100%; /* Positions below the header */
+    left: 0;
+    right: 0;
+    background-color: #04151f; /* Set background color */
+    width: 100vw; /* Full width for the menu */
+    z-index: 999; /* Ensure it appears on top */
+    padding: 20px; /* Add some padding */
+    text-align: left;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  /* Adjust the button if needed */
+  .toggle-button {
+    position: relative;
+    z-index: 1001; /* Ensure it's above other elements */
+  }
+}
+
+/* For smooth transition */
+nav {
+  transition: all 0.5s ease;
+}
+
+.navbar {
+  transition: all 0.5s ease-in-out;
+}
+
+.translate-x-full {
+  transform: translateX(100%);
+}
+
+.translate-x-0 {
+  transform: translateX(0);
 }
 /* ServiceCard.css */
 .card-container {

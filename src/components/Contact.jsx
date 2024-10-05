@@ -10,6 +10,7 @@ const Contact = (props) => {
   const [comment, setComment] = useState("");
   const [role, setRole] = useState("Select an Option");
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false); // New loading state
 
   const clearForm = () => { 
     setName(""); 
@@ -40,6 +41,8 @@ const Contact = (props) => {
       return;
     }
 
+    setLoading(true); // Set loading to true when form is submitted
+
     // Send form using EmailJS
     emailjs.sendForm('service_aiipe2d', 'template_93eud3q', form.current, '2_HnGR0qPrdrYw7Mp')
       .then(response => {
@@ -50,6 +53,7 @@ const Contact = (props) => {
           confirmButtonText: 'OK'
         });
         clearForm();
+        setLoading(false); // Reset loading state after successful submission
       }, error => {
         Swal.fire({
           title: 'Error!',
@@ -57,6 +61,7 @@ const Contact = (props) => {
           icon: 'error',
           confirmButtonText: 'OK'
         });
+        setLoading(false); // Reset loading state after error
       });
   };
 
@@ -114,10 +119,10 @@ const Contact = (props) => {
             >
               <option value="Select an option">-Select an option-</option>
               <option>Freelance Project Inquiry</option>
-<option>Job Opportunity</option>
-<option>Consultancy Session</option>
-<option>Business Proposal</option>
-<option>Partnership Offer</option>
+              <option>Job Opportunity</option>
+              <option>Consultancy Session</option>
+              <option>Business Proposal</option>
+              <option>Partnership Offer</option>
             </select>
             {errors.role && <p className="text-red-500">{errors.role}</p>}
           </div>
@@ -139,22 +144,47 @@ const Contact = (props) => {
 
           <div className="p-2 flex justify-center">
             <button 
-              className="text-center bg-btnColor border-0 py-2 px-12 rounded-sm text-lg hover:bg-background"
+              className="text-center bg-btnColor border-0 py-2 px-12 rounded-sm text-lg hover:bg-background flex items-center justify-center"
               type="submit"
+              disabled={loading} // Disable button when loading
             >
-              Submit
+              {loading ? (
+                <div className="loader"></div> // Display loader
+              ) : (
+                "Submit"
+              )}
             </button>
           </div>
         </form>
-        <hr className="w-4/5 m-auto border-textSecondary mt-10" ></hr>
+        <hr className="w-4/5 m-auto border-textSecondary mt-10" />
         <div className="p-2 w-full pt-8 mt-8 border-t border-gray-900 text-center">
           <span>
-            Email :  <a className="text-gray-400" href="mailto:sarmadirfan78@gmail.com"> sarmadirfan78@gmail.com</a>
+            Email: <a className="text-gray-400" href="mailto:sarmadirfan78@gmail.com"> sarmadirfan78@gmail.com</a>
           </span>
-         
           <p>Sarmad Irfan | © 2024</p>
         </div>
       </div>
+
+      {/* Add styles for the loader */}
+      <style jsx>{`
+        .loader {
+          border: 4px solid rgba(255, 255, 255, 0.3);
+          border-top: 4px solid #fff;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      `}</style>
     </section>
   );
 };

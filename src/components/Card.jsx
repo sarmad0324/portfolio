@@ -12,12 +12,12 @@ const Card = (props) => {
   return (
     <>
       <div
-        className="w-11/12 mx-auto mb-10 rounded-xl border-t-8 border-btnHover"
+        className="w-11/12 mx-auto mb-10 rounded-xl  flex flex-wrap justify-center gap-14"
         data-aos="fade-up" // Apply AOS fade-in effect
       >
         <div className="h-full rounded-xl overflow-hidden bg-btnHover">
           <img
-            className="h-52 lg:h-60 md:h-48 2xl:h-72 w-[94%] m-auto object-cover object-center hover:border-gray-400"
+            className="h-52 lg:h-60 md:h-48 2xl:h-72 w-[96%] m-auto  pt-2  object-cover object-center hover:border-gray-400"
             src={props.img}
             alt="blog"
           />
