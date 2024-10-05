@@ -46,7 +46,7 @@ const Home = () => {
           </button>
         </a>
       </div>
-      <hr className="w-4/5 m-auto border-textSecondary" data-aos="fade-up"></hr>
+      <hr className="w-4/5 m-auto border-textSecondary" ></hr>
     </div>
   );
 };

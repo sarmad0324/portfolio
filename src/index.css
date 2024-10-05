@@ -25,7 +25,7 @@ header {
     top: 100%; /* Positions below the header */
     left: 0;
     right: 0;
-    background-color: #04151f; /* Set background color */
+    background-color: background; /* Set background color */
     width: 100vw; /* Full width for the menu */
     z-index: 999; /* Ensure it appears on top */
     padding: 20px; /* Add some padding */

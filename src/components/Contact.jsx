@@ -144,7 +144,7 @@ const Contact = (props) => {
 
           <div className="p-2 flex justify-center">
             <button 
-              className="text-center bg-btnColor border-0 py-2 px-12 rounded-sm text-lg hover:bg-background flex items-center justify-center"
+              className="text-center bg-btnColor border-0 py-2 px-12 rounded-sm text-lg  flex items-center justify-center"
               type="submit"
               disabled={loading} // Disable button when loading
             >

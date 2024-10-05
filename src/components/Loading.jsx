@@ -5,7 +5,7 @@ const Loading = () => {
   return (
     <div className="loading-container">
       <h2>Loading...</h2>
-      <div className="spinner"></div>
+      <div className="spinner "></div>
       <style jsx>{`
         .loading-container {
           display: flex;
