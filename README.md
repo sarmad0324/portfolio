@@ -1,4 +1,4 @@
-h1 align="center">Hi 👋, I'm Sarmad Irfan</h1>
+<h1 align="center">Hi 👋, I'm Sarmad Irfan</h1>
 <h3 align="center">Experienced Software Engineer Specializing in React & React Native</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=sarmad0324&label=Profile%20views&color=0e75b6&style=flat" alt="sarmad0324" /> </p>
