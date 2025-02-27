@@ -7,9 +7,9 @@
 
 - 🔭 I’m currently working on [Fleet Management App](https://github.com/abdullaht0007/Truckwise-expo/tree/main)
 
-- 🌱 I’m currently learning **Python and AI**
+- 🌱 I’m currently learning **App Development and BlockChain**
 
-- 👯 I’m looking to collaborate on **App Development projects**
+- 👯 I’m looking to collaborate on **App and Web Development projects**
 
 - 👨‍💻 All of my projects are available at [https://sarmadirfan.netlify.app/](https://sarmadirfan.netlify.app/)
 
